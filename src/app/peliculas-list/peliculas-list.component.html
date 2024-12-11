@@ -1,0 +1,32 @@
+<div>
+    <h2>Lista de Películas</h2>
+    <input type="text" placeholder="Buscar película" (input)="buscarPeliculas($event)" />
+    <ul>
+      <li *ngFor="let pelicula of peliculas">
+        <app-pelicula-item 
+          [pelicula]="pelicula" 
+          [addFavoritos]="addFavoritos.bind(this)"
+          (verDetalles)="verDetalles(pelicula)">
+        </app-pelicula-item>
+      </li>
+    </ul>
+  
+    <div *ngIf="selectedPelicula">
+      <h3>Detalles de la Película</h3>
+      <p>Título: {{ selectedPelicula.Title }}</p>
+      <p>Año: {{ selectedPelicula.Year }}</p>
+      <p>Tipo: {{ selectedPelicula.Type }}</p>
+      <p>IMDB ID: {{ selectedPelicula.imdbID }}</p>
+
+    </div>
+  
+    <div *ngIf="peliculasFav.length > 0">
+      <h3>Películas Favoritas</h3>
+      <ul>
+        <li *ngFor="let fav of peliculasFav">
+          {{ fav.Title }} ({{ fav.Year }})
+          <button (click)="EliminarDeFavoritos(fav)">Eliminar de Favoritos</button>
+        </li>
+      </ul>
+    </div>
+  </div>
