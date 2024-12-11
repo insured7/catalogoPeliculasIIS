@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './pelicula-detalle.component.html',
   styleUrls: ['./pelicula-detalle.component.css']
 })
-export class PeliculaDetailComponent {
+export class PeliculaDetalleComponent {
   @Input() pelicula: any;
 
   close(): void {
