@@ -1,5 +1,15 @@
 # PeliculasCatIIS
 
+Este proyecto es un breve Catalogo de Peliculas hecho por Iván Iglesias Sanchez. He utilizado la API OMDB API: https://www.omdbapi.com.
+
+El funcionamiento es el siguiente:
+
+- La pagina tiene un buscador y una lista de peliculas (por defecto sale las de Batman).
+- Cada pelicula tiene un boton de detalle y de favoritos
+- El boton de detalle muestra las propiedades de la pelicula y si le das al de favorito la añade a la lista
+- Si una pelicula está añadida ya, en la consola te mostrará que ya lo tienes añadido.
+- Si la ruta es erronea, redigirá a la pagina "main".
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
 
 ## Development server
